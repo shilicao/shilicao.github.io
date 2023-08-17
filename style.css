@@ -64,7 +64,7 @@ nav ul li a::after{
     content: " ";
     width: 0;
     height: 3px;
-    background-color:rgb(216, 94, 98); /*Change the color if applicable. */
+    background-color:rgb(191, 46, 50); /*Change the color if applicable. */
     position: absolute;
     left:0;
     bottom: 0;
@@ -74,3 +74,70 @@ nav ul li a::after{
 nav ul li a:hover::after{
     width: 100%;
 }
+
+.name{
+    top: 60%;
+    font-size: 30px;
+}
+
+.name h1 {
+    margin-top: 10%;
+    color: white;
+}
+.name h1 span { 
+    color:#ff004f;
+}
+
+/* About section */
+#about{
+    padding: 70px 0;
+    color: #ababab; 
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.lhs {
+    flex-basis: 45%;
+}
+.lhs img{
+    margin-right: 40%;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.rhs {
+    flex-basis: 50%;
+}
+
+h2 {
+    font-size: 60px;
+    font-weight: 450;
+    color: white !important;
+}
+.rhs p {
+    font-size: 20px;
+    font-weight: 100;
+}
+/* A simple animation for the contact section.*/
+/* .contact{
+    flex-basis: 40%;
+}
+.social-icons {
+    margin-top: 50px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    margin-right:20px;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+    transform: translateY(-5px);
+} */
