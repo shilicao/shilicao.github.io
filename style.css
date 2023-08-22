@@ -125,36 +125,6 @@ h2 {
 }
 
 /* Education Section */
-/* #education {
-    background-color: white;
-    margin-top: 3%;
-    padding: 3rem 0;
-    color: orange;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    display: flex;
-    flex-wrap: wrap;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-
-} */
-
-/* .center{
-    text-align: center;
-    font-size: 20px;
-    font-weight: 100%;
-    justify-content: center;
-    align-items: center;
-} */
-/* .education picture{
-    text-align: center;
-    margin-right: 25px;
-    display: grid;
-} */
-
 #education {
     display:flex;
     align-items: center;
@@ -164,7 +134,13 @@ h2 {
     background-color: white;
     margin-top: 3%;
     padding: 3rem 0;
-    color: orange;
+    color: black;
+    font-weight: bold;
+}
+.stars{
+    color:black;
+    text-align: center;
+    margin-right: auto;
 }
 .center {
     justify-content: center;
@@ -172,27 +148,37 @@ h2 {
     text-align: center;
 }
 
-    
-/* .col-md-4 {
-    margin-right:5%;
-    text-align: center;
-}  */
-.col-md-4 p{
+.col p{
    margin: 40px 50px;
 }
 
 /* Skill section */
-.skills {
-    /* background-color: white; */
+#skills {
     margin-top: 3%;
     padding: 3rem 0;
-    color: orange;
+    color: white;
+    font-size: 25px;
+}
+.stars2{
+    color:white;
+    text-align: center;
+    margin-right: auto;
 }
 .skills h4 {
     text-align: center;
     font-size: 20px;
     font-weight: 100%;
     justify-content: center;
+}
+.icon2 {
+    width: auto;
+    height: 100px;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.skills_icons img:hover{
+    transform: scale(1.3);
 }
 
 /* Project section */
