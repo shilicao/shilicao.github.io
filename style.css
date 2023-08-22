@@ -221,13 +221,7 @@ h2 {
 
 /* Project section */
 #projects {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-
     background-color: white;
-    padding: 3rem 0;
     color: black;
     font-weight: bold;
 }
@@ -243,7 +237,27 @@ h2 {
     justify-content: center;
 }
 
-
+.project-list {
+    display: grid;
+    margin-top: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-gap: 45px;
+}
+.journey {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.journey img {
+    width: 100%;
+    height: 70%;
+    border-radius: 10px;
+    display: block;
+}
+.summary h6 {
+    font-size: 18px;
+    color:rgb(171, 21, 31);
+}
 /* A simple animation for the contact section.*/
 .contact{
     flex-basis: 40%;
