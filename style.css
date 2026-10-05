@@ -633,7 +633,7 @@ svg {
 }
 
 /* Phones and narrow windows */
-@media (max-width: 650px) {
+@media (max-width: 500px) {
     /* Put SC and the theme button on the first row,
        with navigation links centered underneath. */
     .site-nav__inner {
