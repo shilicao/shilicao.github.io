@@ -633,7 +633,7 @@ svg {
 }
 
 /* Phones and narrow windows */
-@media (max-width: 500px) {
+@media (max-width: 650px) {
     /* Put SC and the theme button on the first row,
        with navigation links centered underneath. */
     .site-nav__inner {
@@ -653,7 +653,7 @@ svg {
         grid-row: 1;
     }
 
-    #menu {
+    /* #menu {
         grid-column: 1 / -1;
         grid-row: 2;
         justify-content: center;
@@ -664,6 +664,26 @@ svg {
 
     #menu a {
         font-size: 0.9rem;
+    } */
+      #menu {
+        flex-wrap: nowrap;
+        gap: 0.75rem;
+    }
+
+    #menu li {
+        margin: 0;
+    }
+
+    #menu a {
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+
+    .lhs img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
     }
 
     /* Let the hero grow if its content needs more room. */
