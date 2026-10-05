@@ -5,22 +5,77 @@
     box-sizing: border-box;
 
 }
-
+:root {
+    color-scheme: dark;
+    --page-bg: linear-gradient(
+    180deg,
+    #111d35 0%,
+    #1a2540 42%,
+    #343248 68%,
+    #795c70 100%);
+    --nav-bg: #07111f;
+    --text: #eef0f5;
+    --muted: #b8c3d2;
+    --accent: #a3aaf0;
+    
+}
 html{
     scroll-behavior: smooth;
+}
+html[data-theme="light"] {
+    color-scheme: light;
+    --page-bg: linear-gradient(180deg, #f5f8fc, #edf2f7 55%, #f5f6fa);
+    --nav-bg: #fbfcfe;
+    --text: #26364c;
+    --muted: #53657c;
+    --accent: #5376c8;
+}
+body {
+    color: var(--text);
+    background: var(--page-bg);
+    background-attachment: fixed;
 }
 
 
 #header {
     background: transparent;
 }
+.site-nav {
+    width: 100%;
+    background-color: var(--nav-bg);
+    position: relative;
+    z-index: 5;
+}
+.site-nav__inner {
+    width: 100%;
+    max-width: 1440px;
+    min-height: 76px;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    column-gap: 2rem;
+}
+#menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
 section,
 #about,
 #skills,
-#projects {
+#projects,
+.contact {
+    color: var(--text);
     background-color: transparent;
-} 
+}
 
 /*Header layouts*/
 #header{
@@ -460,78 +515,10 @@ html.is-loaded .site-loader {
     }
 }
 
-:root {
-    color-scheme: dark;
-    --page-bg: linear-gradient(
-    180deg,
-    #111d35 0%,
-    #1a2540 42%,
-    #343248 68%,
-    #795c70 100%);
-    --nav-bg: #07111f;
-    --text: #eef0f5;
-    --muted: #b8c3d2;
-    --accent: #a3aaf0;
-    
-}
-
-
-html[data-theme="light"] {
-    color-scheme: light;
-    --page-bg: linear-gradient(180deg, #f5f8fc, #edf2f7 55%, #f5f6fa);
-    --nav-bg: #fbfcfe;
-    --text: #26364c;
-    --muted: #53657c;
-    --accent: #5376c8;
-}
-
-body {
-    color: var(--text);
-    background: var(--page-bg);
-    background-attachment: fixed;
-}
-
+/* ============== Theme button ============================= */
 #header {
     background: transparent;
 }
-
-.site-nav {
-    width: 100%;
-    background-color: var(--nav-bg);
-    position: relative;
-    z-index: 5;
-}
-.site-nav__inner {
-    width: 100%;
-    max-width: 1440px;
-    min-height: 76px;
-    margin: 0 auto;
-    padding: 0 2rem;
-
-    display: grid;
-    grid-template-columns: 1fr auto auto;
-    align-items: center;
-    column-gap: 2rem;
-}
-#menu {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: none;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-section,
-#about,
-#skills,
-#projects,
-.contact {
-    color: var(--text);
-    background-color: transparent;
-}
-
 h1, h2, h3, h4, h5, h6 {
     color: var(--text) !important;
 }
@@ -540,7 +527,6 @@ p,
 nav ul li a {
     color: var(--muted);
 }
-
 .navbar-brand {
     /* color: var(--accent); */
     color:rgb(135, 126, 126);
@@ -595,3 +581,4 @@ html[data-theme="light"] .theme-icon--moon {
 html[data-theme="dark"] .theme-icon--sun {
     color: #c28a2d;
 }
+
