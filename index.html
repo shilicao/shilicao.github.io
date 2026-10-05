@@ -121,36 +121,43 @@
         <circle cx="1340" cy="350" r="3" />
     </g>
     </svg>
-    <div class="container">
-        <nav>
-            <a class="navbar-brand" href="/index.html"><h1>Shili Cao</h1></a> 
-            <ul id = "menu">
-                <li>
-                    <a href="#about"><i class="fas fa-user-alt"></i> About Me</a>
-                </li>
 
-                <li>
-                    <a href="#education"><i class="fas fa-user-graduate"></i> Education</a>
-                </li>
+    <nav class="site-nav">
+        <div class="site-nav__inner">
+            <a class="navbar-brand" href="/index.html">SC</a>
 
-                <li>
-                    <a href="#skills"><i class="fas fa-cogs"></i> Skills</a>
-                </li>
-
-                <li>
-                    <a href="#projects"><i class="fas fa-code"></i> Projects</a>
-                </li>
-                
-                <li>
-                    <a href="#contact info"><i class="fas fa-phone"></i> Contact Info</a>
-                </li>
+            <ul id="menu">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
-        <div class = "name">
-            <h1>Hi, this is <span>Shili.</span><br> Welcome to my homepage.</h1>
+            <button
+                class="theme-toggle"
+                id="themeToggle"
+                type="button"
+                aria-label="Switch to light theme"
+                aria-pressed="false"
+            >
+                <svg class="theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path>
+                </svg>
+
+                <svg class="theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.2 15.6A8.5 8.5 0 0 1 8.4 3.8 8.5 8.5 0 1 0 20.2 15.6Z"></path>
+                </svg>
+
+                <span class="theme-toggle__thumb"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="name">
+            <h1>Hi, this is <span>Shili.</span><br>Welcome to my homepage.</h1>
         </div>
     </div>
-
 </div>
 
 <!-- About Me section -->
@@ -172,48 +179,6 @@
                 As an University graduate, I have found my deepest passion into software world. I am ready to tackle world's most challenging problems 
                 with my knowledge, and looking forward to learn new technologies and skills along this journey.
                 </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Education <section> -->
-<section id="education">
-    <div class="container">
-        <div class = stars>
-            &#10022&#10022&#10022<br><br>
-        </div>
-        <div class="row title" id="title">
-            <div class="col-md">
-                <h3 class="center"><b>My Education</b></h3>
-                <br>
-            </div>
-        </div>
-
-        <div class="row" id="education">
-            <div class="col">
-                <a href="https://www.unlv.edu/" target="_blank"><img class="logo" src="/images/unlv.png" alt="unlv" style="width: 240px; height: auto;"> </a>
-            </div>
-            <div class="col">
-                <p>August 2018 <-> December 2022</p>
-            </div>
-        </div>
-
-        <div class="row" id="education">
-            <div class="col">
-                <a href="https://bonanzabengals.org/" target="_blank"><img class="logo" src="/images/bonanza.png" alt="bonanza" style="width: 230px; height: auto;"> </a>
-            </div>
-            <div class="col">
-                <p>August 2014 <-> May 2018</p>
-            </div>
-        </div>
-
-        <div class="row" id="education">
-            <div class="col">
-                <a href="https://www.garside-ccsd.net/" target="_blank"><img class="logo" src="/images/garside middle school.jpg" alt="garside-ccsd" style="width: 230px; height: auto;"> </a>
-            </div>
-            <div class="col">
-                <p>August 2011 <-> May 2014</p>
             </div>
         </div>
     </div>
@@ -316,11 +281,11 @@
 </section>
 
 <!-- Contact info section -->
-<section id = "contact info" class = "contact info">
+<section id = "contact " class = "contact">
     <div class = "container">
         <div class = "row">
             <div class = "contact">
-                <c1 class = "sub-title">Contact Informations</c1>
+                <c1 class = "sub-title">Contact</c1>
                 <div class = "social-icons">
                     <a href="https://github.com/shilicao" class = "social-link" target = "blank" title = "GitHub">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
@@ -345,7 +310,7 @@
     </div>
 </section>
 
-<script src="preloader.js" defer></script> 
+<script src="functionality.js" defer></script> 
 </body>
 </html>
 

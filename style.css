@@ -11,8 +11,35 @@ html{
 }
 
 body {
-    color: #fff; ;
-    background: #2a2b2d;
+    color: #fff;
+    background:
+        radial-gradient(
+            ellipse at 52% 28%,
+            rgba(77, 58, 82, 0.18),
+            transparent 100%
+        ),
+        linear-gradient(
+            180deg,
+            #d8dbe0 0%,
+            #111b30 48%,
+            #0e0f15 100%
+            /* 180deg,
+            #050d19 0%,
+            #111b30 48%,
+            #1b2035 100% */
+        );
+    background-attachment: fixed;
+}
+
+#header {
+    background: transparent;
+}
+
+section,
+#about,
+#skills,
+#projects {
+    background-color: transparent;
 }
 
 /*Header layouts*/
@@ -63,6 +90,14 @@ body {
     position: relative;
     z-index: 2;
 } */
+ /* .hero-person {
+    z-index: 2;
+} */
+
+/* #header .container {
+    position: relative;
+    z-index: 3;
+}  */
 .hero-city {
     position: absolute;
     left: 0;
@@ -86,16 +121,122 @@ body {
     fill: #f5bf89;
     opacity: 0.65;
 }
-
-.hero-person {
-    z-index: 2;
+.site-nav {
+    width: 100%;
+    background-color: #07111f;
+    position: relative;
+    z-index: 5;
 }
 
-#header .container {
-    position: relative;
-    z-index: 3;
-} 
+.site-nav__inner {
+    max-width: 1200px;
+    min-height: 76px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.site-nav .navbar-brand {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+.site-nav {
+    display: block;
+}
+
+.site-nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#menu {
+    display: flex;
+    margin-left: auto;
+}
+
+#menu {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    margin: 0;
+}
+
+#menu a {
+    color: white;
+    font-size: 14px;
+}
+
+/* theme toggle */
+.theme-toggle {
+    position: relative;
+    width: 66px;
+    height: 36px;
+    flex: 0 0 66px;
+    padding: 0;
+    border: 1px solid #52647c;
+    border-radius: 999px;
+    background: #17243a;
+    cursor: pointer;
+}
+
+.theme-toggle svg {
+    position: absolute;
+    top: 9px;
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: #d7e4f3;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.theme-toggle__sun {
+    left: 8px;
+    stroke: #f0c879 !important;
+}
+
+.theme-toggle__moon {
+    right: 8px;
+}
+
+.theme-toggle__thumb {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #dce8f5;
+    transition: transform 250ms ease, background-color 250ms ease;
+}
+
+html[data-theme="light"] .theme-toggle {
+    background: #e5ebf4;
+    border-color: #c8d3e1;
+}
+
+html[data-theme="light"] .theme-toggle__thumb {
+    transform: translateX(-30px);
+    background: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .theme-toggle__thumb {
+        transition: none;
+    }
+}
+/* ================================================================================== */
 a:link { text-decoration: none; }
 a:visited { text-decoration: none; }
 a:hover { text-decoration: none; }
@@ -190,33 +331,6 @@ h2 {
     font-weight: 100;
 }
 
-/* Education Section */
-#education {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    background-color: white;
-    padding: 3rem 0;
-    color: black;
-    font-weight: bold;
-}
-.stars{
-    margin-top: 0.5%;
-    color:black;
-    text-align: center;
-    margin-right: auto;
-}
-.center {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.col p{
-   margin: 40px 50px;
-}
 
 /* Skill section */
 #skills {
@@ -287,8 +401,8 @@ h2 {
 
 /* Project section */
 #projects {
-    background-color: white;
-    color: black;
+    /* background-color: white;
+    color: black; */
     font-weight: bold;
 }
 .stars2{
@@ -440,6 +554,7 @@ html.is-loaded .site-loader {
 
 .loader-letter {
     stroke: rgb(121, 71, 71);
+    /* stroke: whitesmoke; */
     stroke-width: 8;
     stroke-linecap: round;
     stroke-linejoin: round;
