@@ -309,3 +309,105 @@ h2 {
 .social-icons a:hover{
     transform: translateY(-10%);
 }
+
+/*A full screen loader effect*/
+.site-loader {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    place-items: center;
+    background:
+        radial-gradient(
+            ellipse at 50% 85%,
+            rgba(179, 123, 154, 0.3),
+            transparent 55%
+        ),
+        linear-gradient(
+            180deg,
+            #071426 0%,
+            #101c34 50%,
+            #292941 80%,
+            #45374b 100%
+        );
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 450ms ease, visibility 450ms ease;
+}
+.site-loader {
+    background-image:
+        radial-gradient(1px 1px at 12% 22%, rgba(220, 235, 255, .7) 50%, transparent 100%),
+        radial-gradient(1px 1px at 78% 34%, rgba(220, 235, 255, .55) 50%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 64% 76%, rgba(220, 235, 255, .65) 50%, transparent 100%),
+        radial-gradient(1px 1px at 31% 81%, rgba(220, 235, 255, .45) 50%, transparent 100%),
+        radial-gradient(ellipse at 50% 85%, rgba(179, 123, 154, .3), transparent 55%),
+        linear-gradient(180deg, #071426 0%, #101c34 50%, #292941 80%, #45374b 100%);
+}
+
+html.has-js .site-loader {
+    display: grid;
+}
+
+html.has-js:not(.is-loaded) {
+    overflow: hidden;
+}
+
+html.is-loaded .site-loader {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.site-loader__logo {
+    display: block;
+    width: min(240px, 55vw);
+    overflow: visible;
+}
+
+.loader-letter,
+.loader-orbit {
+    fill: none;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+}
+
+.loader-letter {
+    stroke: rgb(121, 71, 71);
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    animation: draw-mark 800ms ease-out forwards;
+}
+
+.loader-letter--c {
+    animation-delay: 900ms;
+}
+
+.loader-orbit {
+    /* stroke: #a9c9e8; */
+    stroke:#071426;
+    stroke-width: 10;
+    animation: draw-mark 1000ms ease-out 2000ms forwards;
+}
+
+@keyframes draw-mark {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* .site-loader {
+    transition: opacity 250ms ease, visibility 250ms ease;
+} */
+
+@media (prefers-reduced-motion: reduce) {
+    .loader-letter,
+    .loader-orbit {
+        animation: none;
+        stroke-dashoffset: 0;
+    }
+
+    .site-loader {
+        transition: none;
+    }
+}

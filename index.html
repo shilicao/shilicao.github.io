@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        document.documentElement.classList.add("has-js")
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "shortcut icon" type = "image/x-icon" href="https://i.pinimg.com/originals/46/51/01/4651013cca0546b52ee7bc6f537a6347.jpg">
@@ -23,6 +26,66 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!--Full-screen loader effect-->
+<div class="site-loader" role="status" aria-label="Loading portfolio">
+  <svg
+    class="site-loader__logo"
+    viewBox="0 0 200 200"
+    aria-hidden="true"
+  >
+    <defs>
+      <linearGradient id="sc-gradient" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#d7f4ff" />
+        <stop offset="50%" stop-color="#85bcff" />
+        <stop offset="100%" stop-color="#58d7e6" />
+      </linearGradient>
+    </defs>
+
+    <g class="loader-orbit-spin">
+      <ellipse
+        class="loader-orbit"
+        cx="100"
+        cy="100"
+        rx="78"
+        ry="63"
+      />
+      <circle class="loader-orbit-dot" cx="178" cy="100" r="3.5" />
+    </g>
+
+    <text class="loader-initial loader-initial--s" x="72" y="115">S</text>
+    <text class="loader-initial loader-initial--c" x="128" y="115">C</text>
+  </svg>
+</div>
+<div class="site-loader" role="status" aria-label="Loading portfolio">
+  <svg class="site-loader__logo" viewBox="0 0 200 200" aria-hidden="true">
+    <defs>
+      <linearGradient id="sc-gradient" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#d7f4ff" />
+        <stop offset="50%" stop-color="#85bcff" />
+        <stop offset="100%" stop-color="#58d7e6" />
+      </linearGradient>
+    </defs>
+
+   <path
+    class="loader-orbit"
+    pathLength="100"
+    d="M100 6 A94 94 0 1 0 100 194 A94 94 0 1 0 100 6"
+    />
+
+    <path
+      class="loader-letter loader-letter--s"
+      pathLength="100"
+      d="M86 55 C76 45 58 42 45 48 C31 53 27 67 34 77 C41 87 58 91 70 97 C84 104 88 116 82 128 C75 142 57 149 42 145 C34 143 28 139 23 133"
+    />
+
+    <path
+      class="loader-letter loader-letter--c"
+      pathLength="100"
+      d="M168 61 C159 52 147 48 135 50 C115 54 103 73 103 98 C103 123 116 143 136 148 C149 151 161 147 169 137"
+    />
+  </svg>
+</div>
 
 <!-- Header section -->
 <div id="header">
@@ -250,7 +313,7 @@
     </div>
 </section>
 
-  
+<script src="preloader.js" defer></script> 
 </body>
 </html>
 
