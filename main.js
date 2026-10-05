@@ -24,18 +24,20 @@
 
     window.setTimeout(dismissLoader, 8000);
 })();
-(() => {
-    const toggle = document.getElementById("themeToggle");
-    if (!toggle) return;
 
+// Theme button
+(() => {
     const root = document.documentElement;
+    const button = document.getElementById("themeButton");
+
+    if (!button) return;
 
     function applyTheme(theme) {
         const isLight = theme === "light";
 
         root.dataset.theme = isLight ? "light" : "dark";
-        toggle.setAttribute("aria-pressed", String(isLight));
-        toggle.setAttribute(
+        button.setAttribute("aria-pressed", String(isLight));
+        button.setAttribute(
             "aria-label",
             isLight ? "Switch to dark theme" : "Switch to light theme"
         );
@@ -44,9 +46,9 @@
     const savedTheme = localStorage.getItem("theme");
     applyTheme(savedTheme === "light" ? "light" : "dark");
 
-    toggle.addEventListener("click", () => {
+    button.addEventListener("click", () => {
         const nextTheme =
-            root.dataset.theme === "light" ? "dark" : "light";
+            root.dataset.theme === "dark" ? "light" : "dark";
 
         localStorage.setItem("theme", nextTheme);
         applyTheme(nextTheme);

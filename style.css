@@ -10,26 +10,6 @@ html{
     scroll-behavior: smooth;
 }
 
-body {
-    color: #fff;
-    background:
-        radial-gradient(
-            ellipse at 52% 28%,
-            rgba(77, 58, 82, 0.18),
-            transparent 100%
-        ),
-        linear-gradient(
-            180deg,
-            #d8dbe0 0%,
-            #111b30 48%,
-            #0e0f15 100%
-            /* 180deg,
-            #050d19 0%,
-            #111b30 48%,
-            #1b2035 100% */
-        );
-    background-attachment: fixed;
-}
 
 #header {
     background: transparent;
@@ -40,7 +20,7 @@ section,
 #skills,
 #projects {
     background-color: transparent;
-}
+} 
 
 /*Header layouts*/
 #header{
@@ -121,121 +101,7 @@ section,
     fill: #f5bf89;
     opacity: 0.65;
 }
-.site-nav {
-    width: 100%;
-    background-color: #07111f;
-    position: relative;
-    z-index: 5;
-}
 
-.site-nav__inner {
-    max-width: 1200px;
-    min-height: 76px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.site-nav .navbar-brand {
-    color: white;
-    font-size: 1.25rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-}
-.site-nav {
-    display: block;
-}
-
-.site-nav__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#menu {
-    display: flex;
-    margin-left: auto;
-}
-
-#menu {
-    display: flex;
-    gap: 3rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#menu li {
-    margin: 0;
-}
-
-#menu a {
-    color: white;
-    font-size: 14px;
-}
-
-/* theme toggle */
-.theme-toggle {
-    position: relative;
-    width: 66px;
-    height: 36px;
-    flex: 0 0 66px;
-    padding: 0;
-    border: 1px solid #52647c;
-    border-radius: 999px;
-    background: #17243a;
-    cursor: pointer;
-}
-
-.theme-toggle svg {
-    position: absolute;
-    top: 9px;
-    width: 16px;
-    height: 16px;
-    fill: none;
-    stroke: #d7e4f3;
-    stroke-width: 1.7;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
-.theme-toggle__sun {
-    left: 8px;
-    stroke: #f0c879 !important;
-}
-
-.theme-toggle__moon {
-    right: 8px;
-}
-
-.theme-toggle__thumb {
-    position: absolute;
-    top: 4px;
-    right: 4px;
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    background: #dce8f5;
-    transition: transform 250ms ease, background-color 250ms ease;
-}
-
-html[data-theme="light"] .theme-toggle {
-    background: #e5ebf4;
-    border-color: #c8d3e1;
-}
-
-html[data-theme="light"] .theme-toggle__thumb {
-    transform: translateX(-30px);
-    background: #fff;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .theme-toggle__thumb {
-        transition: none;
-    }
-}
 /* ================================================================================== */
 a:link { text-decoration: none; }
 a:visited { text-decoration: none; }
@@ -592,4 +458,140 @@ html.is-loaded .site-loader {
     .site-loader {
         transition: none;
     }
+}
+
+:root {
+    color-scheme: dark;
+    --page-bg: linear-gradient(
+    180deg,
+    #111d35 0%,
+    #1a2540 42%,
+    #343248 68%,
+    #795c70 100%);
+    --nav-bg: #07111f;
+    --text: #eef0f5;
+    --muted: #b8c3d2;
+    --accent: #a3aaf0;
+    
+}
+
+
+html[data-theme="light"] {
+    color-scheme: light;
+    --page-bg: linear-gradient(180deg, #f5f8fc, #edf2f7 55%, #f5f6fa);
+    --nav-bg: #fbfcfe;
+    --text: #26364c;
+    --muted: #53657c;
+    --accent: #5376c8;
+}
+
+body {
+    color: var(--text);
+    background: var(--page-bg);
+    background-attachment: fixed;
+}
+
+#header {
+    background: transparent;
+}
+
+.site-nav {
+    width: 100%;
+    background-color: var(--nav-bg);
+    position: relative;
+    z-index: 5;
+}
+.site-nav__inner {
+    width: 100%;
+    max-width: 1440px;
+    min-height: 76px;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    column-gap: 2rem;
+}
+#menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+section,
+#about,
+#skills,
+#projects,
+.contact {
+    color: var(--text);
+    background-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text) !important;
+}
+
+p,
+nav ul li a {
+    color: var(--muted);
+}
+
+.navbar-brand {
+    /* color: var(--accent); */
+    color:rgb(135, 126, 126);
+    font-size: 3rem;
+    font-weight: 1000;
+    letter-spacing: 0.12em;
+} 
+
+/* One round button; its icon changes with the theme. */
+.theme-button {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(150, 170, 195, 0.35);
+    border-radius: 50%;
+    color: var(--text);
+    background: rgba(150, 170, 195, 0.12);
+    cursor: pointer;
+    transition:
+        transform 180ms ease,
+        background-color 180ms ease,
+        border-color 180ms ease;
+}
+.theme-button:hover {
+    transform: translateY(-2px);
+    background-color: rgba(150, 170, 195, 0.2);
+    border-color: rgba(150, 170, 195, 0.55);
+}
+
+.theme-button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+.theme-icon {
+    display: none;
+    width: 19px;
+    height: 19px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+html[data-theme="dark"] .theme-icon--sun,
+html[data-theme="light"] .theme-icon--moon {
+    display: block;
+}
+
+html[data-theme="dark"] .theme-icon--sun {
+    color: #c28a2d;
 }
