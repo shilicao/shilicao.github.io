@@ -105,7 +105,8 @@ section,
     transition: all 0.3s ease;
 }
 
-/* #header { Adds a person figure.
+/* Adds a person figure. */
+#header { 
     position: relative;
     overflow: hidden;
 }
@@ -115,7 +116,7 @@ section,
     bottom: 0;
     left: 50%;
     width: 100px;
-    height: 220px;
+    height: 230px;
     transform: translateX(-50%);
     fill: #080f1b;
     z-index: 1;
@@ -124,15 +125,15 @@ section,
 #header .container {
     position: relative;
     z-index: 2;
-} */
- /* .hero-person {
+} 
+.hero-person {
     z-index: 2;
-} */
+} 
 
-/* #header .container {
+#header .container {
     position: relative;
     z-index: 3;
-}  */
+}  
 .hero-city {
     position: absolute;
     left: 0;
@@ -157,7 +158,7 @@ section,
     opacity: 0.65;
 }
 
-/* ================================================================================== */
+/* ==================================== Hero Section ============================================== */
 a:link { text-decoration: none; }
 a:visited { text-decoration: none; }
 a:hover { text-decoration: none; }
@@ -203,20 +204,57 @@ nav ul li a:hover::after{
     width: 100%;
 }
 
-.name{
-    top: 60%;
-    font-size: 30px;
+.hero-layout {
+    min-height: calc(70vh);
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 3rem;
+    position: relative;
+    z-index: 1;
 }
 
-.name h1 {
-    margin-top: 10%;
-    color: white;
-}
-.name h1 span { 
-    color:#ff004f;
+.hero-info {
+    max-width: 620px;
 }
 
-/* About section */
+.hero-title {
+    margin-bottom: 0.5rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.hero-info h1 {
+    font-size: clamp(3.5rem, 7vw, 5.5rem);
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.hero-role {
+    margin-top: 0.35rem;
+    color: var(--muted);
+    font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+}
+
+.hero-intro {
+    max-width: 34ch;
+    margin-top: 1.5rem;
+    color: var(--text);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+@media (max-width: 650px) {
+    .hero-layout {
+        min-height: calc(100svh - 100px);
+        grid-template-columns: 1fr;
+        align-content: center;
+        gap: 1.5rem;
+    }
+}
+
+/* ========================== About section =================================*/
 #about{
     padding: 70px 0;
     color: #ababab; 
@@ -253,7 +291,7 @@ h2 {
 }
 
 
-/* Skill section */
+/* =========================== Skill section ===========================*/
 #skills {
 
     padding: 3rem 0;
@@ -320,7 +358,7 @@ h2 {
     transform: scale(1.2);
 } 
 
-/* Project section */
+/* =============================== Project section ============================*/
 #projects {
     /* background-color: white;
     color: black; */
@@ -388,7 +426,7 @@ h2 {
     background-color:black;
 }
 
-/* A simple animation for the contact section.*/
+/* =================== contact section.============================*/
 .sub-title {
     font-weight: bold;
     font-size: 20px;
@@ -653,19 +691,7 @@ svg {
         grid-row: 1;
     }
 
-    /* #menu {
-        grid-column: 1 / -1;
-        grid-row: 2;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 0.5rem 1.25rem;
-        white-space: normal;
-    }
-
-    #menu a {
-        font-size: 0.9rem;
-    } */
-      #menu {
+    #menu {
         flex-wrap: nowrap;
         gap: 0.75rem;
     }
