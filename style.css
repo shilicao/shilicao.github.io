@@ -281,10 +281,12 @@ nav ul li a:hover::after{
 }
 
 h2 {
+    margin-top: -5%;
     font-size: 60px;
     font-weight: 450;
-    color: white !important;
+    color: rgb(141, 131, 131) !important;
 }
+
 .rhs p {
     font-size: 20px;
     font-weight: 100;
