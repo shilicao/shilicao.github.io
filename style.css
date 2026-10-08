@@ -269,12 +269,8 @@ nav ul li a:hover::after{
 .lhs {
     flex-basis: 45%;
 }
-.lhs img{
-    margin-right: 40%;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-} */
+    */
+
 /* About section: smaller portrait beside the story */
 #about .description {
     display: grid;
@@ -282,17 +278,24 @@ nav ul li a:hover::after{
     align-items: start;
     gap: clamp(2rem, 5vw, 4rem);
 }
-
-#about .lhs img {
+.lhs img{
+    margin-right: 40%;
+    margin-top: 5%;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+} 
+/* #about .lhs img {
+    margin-top: 20rem;
     display: block;
     width: 100%;
     max-width: 340px;
     height: auto;
     margin: 0;
     border-radius: 18px;
-}
+} */
 
-/* Option B: milestone cards below the story and portrait */
+/* timeline cards */
 .journey {
     margin-top: 3rem;
 }
@@ -309,7 +312,7 @@ nav ul li a:hover::after{
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    max-width: 850px;
+    max-width: 750px;
     margin: 2rem 0 0;
     padding: 0;
     list-style: none;
@@ -321,15 +324,15 @@ nav ul li a:hover::after{
     position: absolute;
     top: 1.3rem;
     bottom: 1.3rem;
-    left: 7px;
+    left: 5rem;
     width: 2px;
     background: rgba(163, 170, 240, 0.6);
 }
 
 .journey-timeline li {
     position: relative;
-    margin-left: 2rem;
-    padding: 1rem 1.25rem;
+    margin-left: 7rem;
+    padding: 0.9rem 1.1rem;
     border: 1px solid rgba(163, 170, 240, 0.25);
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.06);
@@ -374,7 +377,7 @@ html[data-theme="light"] .journey-timeline li {
 }
 
 /* Tablet: two cards per row, without the connecting line */
-/* @media (max-width: 900px) {
+@media (max-width: 900px) {
     .journey-timeline {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 1rem;
@@ -388,10 +391,10 @@ html[data-theme="light"] .journey-timeline li {
     .journey-timeline li {
         margin-top: 0;
     }
-} */
+} 
 
 /* Phone: stack the cards */
-/* @media (max-width: 650px) {
+ @media (max-width: 650px) {
     #about .description {
         grid-template-columns: 1fr;
     }
@@ -404,13 +407,13 @@ html[data-theme="light"] .journey-timeline li {
     .journey-timeline {
         grid-template-columns: 1fr;
     }
-} */
+} 
 .rhs {
     flex-basis: 50%;
 }
 
 h2 {
-    margin-top: -5%;
+    margin-top: 1%;
     font-size: 60px;
     font-weight: 450;
     color: rgb(141, 131, 131) !important;
