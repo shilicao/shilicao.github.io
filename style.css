@@ -300,12 +300,6 @@ nav ul li a:hover::after{
     margin-top: 3rem;
 }
 
-.journey > h3 {
-    margin-bottom: 1rem;
-    color: var(--text);
-    font-size: 1.6rem;
-}
-
 /* Vertical journey timeline */
 .journey-timeline {
     position: relative;
@@ -376,92 +370,141 @@ html[data-theme="light"] .journey-timeline li {
     background: rgba(255, 255, 255, 0.6);
 }
 
-/* Tablet: two cards per row, without the connecting line */
-@media (max-width: 900px) {
-    .journey-timeline {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1rem;
-    }
+.rhs {
+    flex-basis: 50%;
+}
 
-    .journey-timeline::before,
-    .journey-timeline li::before {
-        display: none;
-    }
+h2 {
+    margin-top: 1%;
+    font-size: 60px;
+    font-weight: 450;
+    color: rgb(141, 131, 131) !important;
+}
 
-    .journey-timeline li {
-        margin-top: 0;
-    }
-} 
+.rhs p {
+    font-size: 20px;
+    font-weight: 100;
+}
 
 
 
 /* =========================== Skill section ===========================*/
-#skills {
-
-    padding: 3rem 0;
-    color: white;
-    font-size: 25px;
-    padding: 3rem 0;
+/* Skills section */
+.skills {
     position: relative;
     overflow: hidden;
+    padding: clamp(4rem, 8vw, 7rem) 0;
+    color: var(--text);
 }
 
-.stars2{
-    color:white;
-    text-align: center;
-    margin-right: auto;
+.skills__intro {
+    max-width: 760px;
+    margin-bottom: 2.5rem;
 }
 
-.skills h4 {
-    text-align: center;
-    font-size: 20px;
-    font-weight: 100%;
-    justify-content: center;
+.skills__opening{
+    color: #b4bbc3 !important;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+.skill-group__number {
+    color: var(--accent);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
-.icons {
-    width: auto;
-    height: 100px;
-    display: inline-block;
-    margin-right: 20px;
-    margin-top: 20px;
+
+.skills__groups {
+    max-width: 1100px;
 }
 
-.skills canvas {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.skill-group {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.65fr) minmax(0, 1.5fr);
+    align-items: start;
+    gap: 2rem;
+    padding: 1.6rem 0;
+    border-top: 1px solid rgba(200, 210, 235, 0.2);
 }
 
-.skills .group {
-    list-style-type: none;
+.skill-group__heading {
+    margin-top: 0.6rem;
+    color: var(--text);
+    font-size: 1.2rem;
+}
+
+.skill-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1000px;
-    margin:0 auto;
-    position: relative;
+    gap: 0.7rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-.skills .group svg {
-    margin: 0.5rem;
-    width: 90px;
-}
-
-.skills .group li {
-    transition: 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.skill-item {
+    display: inline-flex;
     align-items: center;
-    margin: 1rem;
+    gap: 0.65rem;
+    min-height: 46px;
+    padding: 0.55rem 0.85rem;
+    border: 1px solid rgba(200, 210, 235, 0.2);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.045);
+    color: var(--text);
+    font-size: 0.95rem;
+    transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
 }
 
-.skills .group li:hover {
-    transform: translateY(-10px);
-    transform: scale(1.2);
-} 
+.skill-item__icon {
+    display: block;
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+    object-fit: contain;
+}
 
+/* Scroll-reveal states.
+   Content stays visible unless your JavaScript adds "has-reveal"
+   to <html> and "is-visible" to each revealed group. */
+html.has-reveal #skills [data-reveal] {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+        opacity 600ms ease,
+        transform 600ms ease;
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+html.has-reveal #skills [data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 700px) {
+    .skill-group {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html.has-reveal #skills [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .skill-item:hover {
+        transform: translateY(-4px);
+        border-color: rgba(200, 210, 235, 0.45);
+        background: rgba(255, 255, 255, 0.08);
+    }
+}
 /* =============================== Project section ============================*/
 #projects {
     /* background-color: white;
@@ -553,7 +596,7 @@ html[data-theme="light"] .journey-timeline li {
     transform: translateY(-10%);
 }
 
-/*A full screen loader effect*/
+/*=========================== A full screen loader effect ===============================*/
 .site-loader {
     display: none;
     position: fixed;
@@ -899,7 +942,23 @@ svg {
     }
 }
 
-/* Phone: stack the cards */
+/* Tablet: about section */
+@media (max-width: 900px) {
+    .journey-timeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .journey-timeline::before,
+    .journey-timeline li::before {
+        display: none;
+    }
+
+    .journey-timeline li {
+        margin-top: 0;
+    }
+} 
+/* Phone: About section */
 @media (max-width: 650px) {
     #about .description {
         display: grid;
@@ -949,19 +1008,4 @@ svg {
         margin: 0 0 1rem;
         box-sizing: border-box;
     }
-}
-.rhs {
-    flex-basis: 50%;
-}
-
-h2 {
-    margin-top: 1%;
-    font-size: 60px;
-    font-weight: 450;
-    color: rgb(141, 131, 131) !important;
-}
-
-.rhs p {
-    font-size: 20px;
-    font-weight: 100;
 }

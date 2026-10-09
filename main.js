@@ -54,3 +54,30 @@
         applyTheme(nextTheme);
     });
 })();
+
+//scroll effect
+(() => {
+    const groups = document.querySelectorAll("#skills [data-reveal]");
+
+    if (!groups.length) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!("IntersectionObserver" in window)) return;
+
+    document.documentElement.classList.add("has-reveal");
+
+    const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+
+            entry.target.classList.add("is-visible");
+            currentObserver.unobserve(entry.target);
+        });
+    }, {
+        threshold: 0.30
+    });
+
+    groups.forEach((group, index) => {
+        group.style.setProperty("--reveal-delay", `${index * 100}ms`);
+        observer.observe(group);
+    });
+})();

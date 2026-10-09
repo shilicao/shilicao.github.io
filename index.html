@@ -187,7 +187,7 @@
             </div>
         </div>
         <div class="journey">
-            <h3>My Journey</h3>
+            <!-- <h3>My Journey</h3> -->
 
             <ol class="journey-timeline">
                 <li>
@@ -218,39 +218,101 @@
     </div>
 </section>
 
-<!-- Skills Section -->
+<!-- Skills section -->
 <section id="skills" class="skills">
     <div class="container">
-        <div class = stars2>
-            &#10022&#10022&#10022<br><br>
-        </div> 
-        <div class="row title" id="title">
-            <div class="col-md">
-                <h4 class="center"><b>My Skills</b></h4>
-                <br>
-            </div>
-        </div>
-        <ul class="group">
-            <!-- For some reason, I can't find the icons for some of the skills , so I decided to use pictures I found online and used them as img src -->
-            <li><span class="iconify" data-icon="logos:python" data-inline="false" data-width=100px data-height="100px"></span></li>
-            <li><span class="iconify" data-icon="logos:mysql" data-inline="false" data-width=100px data-height="100px"></span></li> 
-            <li><span class="iconify" data-icon="logos:mariadb" data-inline="false" data-width="100px" data-height="100px"></span></li>
-            <li><img src="/images/skills/jupyter.png" class="icons" alt="Jupyter"></li>
-            <li><img src="/images/skills/powerBI.jpg" class="icons" alt="PowerBI"></li>
-            <li><span class="iconify" data-icon="vscode-icons:file-type-html" data-inline="false" data-width="100px" data-height="100px"></span></li>
-            <li><span class="iconify" data-icon="vscode-icons:file-type-css" data-inline="false" data-width="100px" data-height="100px"></span></li>
-            <li><span class="iconify" data-icon="logos:javascript" data-inline="false" data-width="100px" data-height="100px"></span></li>
-            <li><img src="/images/skills/c++.png" class="icons" alt="C++"></li>
-            <li><img src="/images/skills/c.png" class="icons" alt="C"></li>
-            <li><img src="/images/skills/excel.png" class="icons" alt="Excel"></li>
-            <li><span class="iconify" data-icon="logos:java" data-inline="false" data-width="100px" data-height="100px"></span></li>
-            <li><span class="iconify" data-icon="logos:git-icon" data-inline="false" data-width="100px" data-height="100px"></span></li>
-            <li><img src="/images/skills/windows.png" class="icons" alt="Jupyter"></li>
-            <li><img src="/images/skills/tableau.png" class="icons" alt="Tableau"></li>
-        </ul>
-    </div>
+        <header class="skills__intro">
+            <p class="skills__opening">Technical ToolKit</p>
+        </header>
 
-  </section>
+        <div class="skills__groups">
+            <article class="skill-group" data-reveal>
+                <div class="skill-group__heading">
+                    <p class="skill-group__number">01 / Programming languages</p>
+                </div>
+
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <img class="skill-item__icon" src="/images/skills/c++.png" alt="">
+                        <span>C++</span>
+                    </li>
+                    <li class="skill-item">
+                        <img class="skill-item__icon" src="/images/skills/c.png" alt="">
+                        <span>C</span>
+                    </li>
+                    <li class="skill-item">
+                        <span class="iconify skill-item__icon"
+                              data-icon="logos:python" aria-hidden="true"></span>
+                        <span>Python</span>
+                    </li>
+                    <li class="skill-item">
+                        <span class="iconify skill-item__icon"
+                              data-icon="logos:javascript" aria-hidden="true"></span>
+                        <span>JavaScript</span>
+                    </li>
+                    <li class="skill-item">
+                        <span class="iconify skill-item__icon"
+                              data-icon="logos:java" aria-hidden="true"></span>
+                        <span>Java</span>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="skill-group" data-reveal>
+                <div class="skill-group__heading">
+                    <p class="skill-group__number">02 / Frameworks</p>
+                </div>
+
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <span class="iconify skill-item__icon"
+                              data-icon="logos:react" aria-hidden="true"></span>
+                        <span>React</span>
+                    </li>
+                    <li class="skill-item">
+                        <span class="iconify skill-item__icon"
+                              data-icon="logos:tensorflow" aria-hidden="true"></span>
+                        <span>TensorFlow</span>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="skill-group" data-reveal>
+                <div class="skill-group__heading">
+                    <p class="skill-group__number">03 / Developer Tools </p>
+                </div>
+
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <span class="iconify skill-item__icon"
+                              data-icon="logos:git-icon" aria-hidden="true"></span>
+                        <span>Git</span>
+                    </li>
+                    <li class="skill-item">
+                        <span class="iconify skill-item__icon"
+                              data-icon="logos:github-icon" aria-hidden="true"></span>
+                        <span>GitHub</span>
+                    </li>
+                    <li class="skill-item">
+                        <span class="iconify skill-item__icon"
+                              data-icon="vscode-icons:file-type-vscode" aria-hidden="true"></span>
+                        <span>VS Code</span>
+                    </li>
+                    <li class="skill-item">
+                        <span class="iconify skill-item__icon"
+                              data-icon="simple-icons:sublimetext" aria-hidden="true"></span>
+                        <span>Sublime Text 3</span>
+                    </li>
+                    <li class="skill-item">
+                        <span class="iconify skill-item__icon"
+                              data-icon="logos:mysql" aria-hidden="true"></span>
+                        <span>MySQL Workbench</span>
+                    </li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>
 
 
 <!-- Projects section -->
