@@ -394,20 +394,50 @@ html[data-theme="light"] .journey-timeline li {
 } 
 
 /* Phone: stack the cards */
- @media (max-width: 650px) {
+@media (max-width: 650px) {
     #about .description {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.5rem;
+    }
+
+    #about .lhs,
+    #about .rhs {
+        width: 100%;
+        min-width: 0;
+        flex-basis: auto;
     }
 
     #about .lhs img {
-        max-width: 300px;
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        height: auto;
         margin: 0 auto;
     }
 
-    .journey-timeline {
-        grid-template-columns: 1fr;
+    #about .rhs p {
+        font-size: 1rem;
+        line-height: 1.6;
     }
-} 
+
+    /* Keep the timeline rail and dots aligned, with more room for cards. */
+    .journey-timeline {
+        max-width: 100%;
+    }
+
+    .journey-timeline li {
+        margin-left: 1.25rem;
+    }
+
+    .journey-timeline li::before {
+        left: -1.25rem;
+    }
+
+    .journey-timeline::before {
+        left: 7px;
+    }
+}
 .rhs {
     flex-basis: 50%;
 }
