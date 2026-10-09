@@ -393,72 +393,6 @@ html[data-theme="light"] .journey-timeline li {
     }
 } 
 
-/* Phone: stack the cards */
-@media (max-width: 650px) {
-    #about .description {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr);
-        gap: 1.5rem;
-    }
-
-    #about .lhs,
-    #about .rhs {
-        width: 100%;
-        min-width: 0;
-        flex-basis: auto;
-    }
-
-    #about .lhs img {
-        display: block;
-        width: 100%;
-        max-width: 280px;
-        height: auto;
-        margin: 0 auto;
-    }
-
-    #about .rhs p {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-
-    /* Keep the timeline rail and dots aligned, with more room for cards. */
-    .journey-timeline {
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 100%;
-        max-width: none;
-        margin: 1.5rem 0 0;
-        padding: 0;
-
-    }
-    .journey-timeline li::before {
-        display: none;
-    }
-
-    .journey-timeline::before {
-        display: none;
-    }
-    .journey-timeline li {
-        width: 100%;
-        margin: 0 0 1rem;
-        box-sizing: border-box;
-    }
-}
-.rhs {
-    flex-basis: 50%;
-}
-
-h2 {
-    margin-top: 1%;
-    font-size: 60px;
-    font-weight: 450;
-    color: rgb(141, 131, 131) !important;
-}
-
-.rhs p {
-    font-size: 20px;
-    font-weight: 100;
-}
 
 
 /* =========================== Skill section ===========================*/
@@ -963,4 +897,71 @@ svg {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+}
+
+/* Phone: stack the cards */
+@media (max-width: 650px) {
+    #about .description {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.5rem;
+    }
+
+    #about .lhs,
+    #about .rhs {
+        width: 100%;
+        min-width: 0;
+        flex-basis: auto;
+    }
+
+    #about .lhs img {
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #about .rhs p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* Keep the timeline rail and dots aligned, with more room for cards. */
+    .journey-timeline {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: none;
+        margin: 1.5rem 0 0;
+        padding: 0;
+
+    }
+    .journey-timeline li::before {
+        display: none;
+    }
+
+    .journey-timeline::before {
+        display: none;
+    }
+    .journey-timeline li {
+        width: 100%;
+        margin: 0 0 1rem;
+        box-sizing: border-box;
+    }
+}
+.rhs {
+    flex-basis: 50%;
+}
+
+h2 {
+    margin-top: 1%;
+    font-size: 60px;
+    font-weight: 450;
+    color: rgb(141, 131, 131) !important;
+}
+
+.rhs p {
+    font-size: 20px;
+    font-weight: 100;
 }
