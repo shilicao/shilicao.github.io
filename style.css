@@ -423,19 +423,22 @@ html[data-theme="light"] .journey-timeline li {
 
     /* Keep the timeline rail and dots aligned, with more room for cards. */
     .journey-timeline {
-        max-width: 100%;
-    }
+        width: 100%;
+        max-width: none;
+        margin: 1.5rem 0 0;
+        padding: 0;
 
-    .journey-timeline li {
-        margin-left: 1.25rem;
     }
-
     .journey-timeline li::before {
-        left: -1.25rem;
+        display: none;
     }
 
     .journey-timeline::before {
-        left: 7px;
+        display: none;
+    }
+    .journey-timeline li {
+        width: 100%;
+        margin: 0 0 1rem;
     }
 }
 .rhs {
