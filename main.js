@@ -103,8 +103,22 @@
             }
         });
     }, {
-        threshold: 0.45
+        threshold: 0.35
     });
 
     items.forEach((item) => observer.observe(item));
+})();
+
+// contact section
+(() => {
+    const section = document.querySelector("#contact");
+    if (!section || !("IntersectionObserver" in window)) return;
+
+    section.classList.add("has-reveal");
+
+    const observer = new IntersectionObserver(([entry]) => {
+        section.classList.toggle("is-visible", entry.isIntersecting);
+    }, { threshold: 0.5 });
+
+    observer.observe(section);
 })();

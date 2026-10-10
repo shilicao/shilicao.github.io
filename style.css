@@ -433,7 +433,8 @@ h2 {
     align-items: start;
     gap: 2rem;
     padding: 1.6rem 0;
-    border-top: 1px solid rgba(200, 210, 235, 0.2);
+    /* border-top: 1px solid rgba(200, 210, 235, 0.2); */
+    border-top: 2px solid rgb(27, 26, 26);
 }
 
 .skill-group__heading {
@@ -560,7 +561,7 @@ html.has-reveal #skills [data-reveal].is-visible {
     align-items: center;
     gap: clamp(2rem, 5vw, 4rem);
     padding: 2.5rem 0;
-    border-top: 1px solid rgba(200, 210, 235, 0.2);
+    border-top: 2px solid rgb(27, 26, 26);
 }
 
 /* Alternate the image and text on every other project. */
@@ -691,26 +692,160 @@ html.has-reveal #projects [data-reveal].is-visible {
 }
 
 /* =================== contact section.============================*/
-.sub-title {
-    font-weight: bold;
-    font-size: 20px;
+
+#contact-section {
+    min-height: 70vh;
+    padding: clamp(5rem, 10vw, 8rem) 0 2rem;
+    color: var(--text);
 }
-.contact{
-    flex-basis: 40%;
+.stars2{
+    color:black;
+    font-size:3rem;
+    text-align: center;
+    margin-right: auto;
 }
+.contact-content {
+    display: flex;
+}
+
+.contact-body {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-title {
+    margin: 0 0 1.5rem;
+    color: rgb(113, 102, 102);
+    font-size: 2.3rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.contact-message {
+   max-width: 580px;
+    margin: 1.5rem 0 0;
+    padding-left: 1.2rem;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
 .social-icons {
-    margin-top: 50px;
+    justify-content: center;
+    gap: 3rem;
 }
 
-.social-icons a{
+.social-link .iconify {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-bottom: 1px solid var(--section-divider);
+    color: var(--text);
     text-decoration: none;
-    margin-right:15px;
-    display: inline-block;
-    transition: transform 0.5s;
 }
 
-.social-icons a:hover{
-    transform: translateY(-10%);
+/* Hidden only after JavaScript enables the scroll reveal. */
+.contact-section.has-reveal .social-link {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.55);
+    filter: blur(5px);
+}
+
+.contact-section.has-reveal.is-visible .social-link {
+    animation: icon-appear 500ms ease-out both;
+}
+
+.contact-section.has-reveal.is-visible .social-link:nth-child(2) {
+    animation-delay: 200ms;
+}
+
+.contact-section.has-reveal.is-visible .social-link:nth-child(3) {
+    animation-delay: 300ms;
+}
+
+.contact-section.has-reveal.is-visible .social-link:nth-child(4) {
+    animation-delay: 400ms;
+}
+
+.contact-section.has-reveal.is-visible .social-link:nth-child(5) {
+    animation-delay: 500ms;
+}
+
+@keyframes icon-appear {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(0.55);
+        filter: blur(5px);
+    }
+
+    1% {
+        visibility: visible;
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+}
+
+.contact-footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 6rem;
+    padding-top: 1rem;
+    color: var(--muted);    
+}
+
+@media (min-width: 650px) and (max-width: 1000px) {
+    .contact-section {
+        min-height: 60vh;
+        padding: 5rem 1.5rem 2rem;
+    }
+
+    .contact-body {
+        max-width: 680px;
+    }
+
+    .contact-message {
+        max-width: 560px;
+        font-size: 1rem;
+    }
+
+    .social-icons {
+        gap: 0.8rem;
+    }
+
+    .contact-footer {
+        margin-top: 2.5rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-section.has-reveal .social-link {
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+        filter: none;
+    }
+
+    .contact-section.has-reveal.is-visible .social-link {
+        animation: none;
+    }
 }
 
 /*=========================== A full screen loader effect ===============================*/
