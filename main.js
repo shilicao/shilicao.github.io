@@ -81,3 +81,30 @@
         observer.observe(group);
     });
 })();
+
+// project section
+(() => {
+    const items = document.querySelectorAll("#projects [data-reveal]");
+    const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (!items.length || reduceMotion || !("IntersectionObserver" in window)) {
+        return;
+    }
+
+    document.documentElement.classList.add("has-reveal");
+
+    const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                currentObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.45
+    });
+
+    items.forEach((item) => observer.observe(item));
+})();

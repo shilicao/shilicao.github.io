@@ -221,6 +221,9 @@
 <!-- Skills section -->
 <section id="skills" class="skills">
     <div class="container">
+        <div class = stars2>
+            &#10022&#10022&#10022<br><br>
+        </div> 
         <header class="skills__intro">
             <p class="skills__opening">Technical ToolKit</p>
         </header>
@@ -315,65 +318,142 @@
 </section>
 
 
-<!-- Projects section -->
 <section id="projects" class="projects">
     <div class="container">
         <div class = stars2>
             &#10022&#10022&#10022<br><br>
         </div> 
-        <div class="row title" id="title">
-            <div class="col-md">
-                <h5 class="center"><b>My Projects</b></h5>
-                <br>
-            </div>
-        </div>
-        <div class = project-list>
-            <div class = journey>
-                <img src = "images/projects/music.png" alt="">
-                <div class = "summary">
-                    <h6>AI-Music generator</h6>
-                    <p>Developed by a team of nine during senior design class with only python and its useful packages.
-                       The biggest goal of this project was to create a music generator that can be used for everyone
-                       regradless of musical background. This project has eventually won 
-                       the first place in senior design competition!
-                    </p>
-                    <a href="https://github.com/shilicao/AI-Music" class = "btn-outline" target = "blank"><i class="fab fa-github"></i> Code</a>
+        <header class="projects__intro" data-reveal>
+            <p class="projects__eyebrow">Selected projects · 01—03</p>
+            <h2>What I've been building</h2>
+            <p>
+                A few projects that helped me grow as an engineer,
+                one step at a time.
+            </p>
+        </header>
+
+        <div class="project-list">
+            <article class="project-row" data-reveal>
+                <div class="project-row__image">
+                    <img
+                        src="images/projects/music.png"
+                        alt="AI Music Generator project interface"
+                        loading="lazy"
+                    >
                 </div>
-            </div>
-            <div class = journey>
-                <img src = "images/projects/covidapp.png">
-                <div class = summary>
-                    <h6>Covid App</h6>
-                    <p>Corona virus has been a diaster for the past couple years, and it has no sign of going away. 
-                        This project was developed with python and streamlit, aimed to provide a quick overview of covid-related
-                       informations.
+
+                <div class="project-row__content">
+                    <p class="project-row__number">01 · Team project</p>
+                    <h3>AI Music Generator</h3>
+                    <p class="project-row__description">
+                        Built with a team of nine for senior design, this project
+                        aimed to make music generation approachable for people
+                        with or without a musical background. It won first place
+                        in the senior design competition.
                     </p>
-                    <a href="https://github.com/shilicao/CovidApp" class = "btn-outline" target = "blank"><i class="fab fa-github"></i> Code</a>
+
+                    <ul class="project-row__technologies" aria-label="Technologies used">
+                        <li>Python</li>
+                    </ul>
+
+                    <div class="project-row__links">
+                        <a
+                            class="github-link"
+                            href="https://github.com/shilicao/AI-Music"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="AI Music Generator source code on GitHub"
+                            title="View source on GitHub"
+                        >
+                            <span class="iconify"
+                                data-icon="simple-icons:github"
+                                aria-hidden="true"></span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class = journey>
-                <img src = "images/projects/films.png">
-                <div class = summary>
-                    <h6>Best Film</h6>
-                    <p>A project developed in pandas and matplotlib that created visual charts to identify the best film 
-                    in US history.The source can be found at IMB.com
+            </article>
+
+            <article class="project-row" data-reveal>
+                <div class="project-row__image">
+                    <img
+                        src="images/projects/films.png"
+                        alt="Film data visualization project"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="project-row__content">
+                    <p class="project-row__number">02 · Data visualization</p>
+                    <h3>Best Film</h3>
+                    <p class="project-row__description">
+                        Used film data to create visual charts exploring U.S.
+                        movie history. The project helped me practice turning
+                        data into something easier to explore.
                     </p>
-                    <a href="https://github.com/shilicao/Films-Visualization" class = "btn-outline" target = "blank"><i class="fab fa-github"></i> Code</a>
+
+                    <ul class="project-row__technologies" aria-label="Technologies used">
+                        <li>Python</li>
+                        <li>Pandas</li>
+                        <li>Matplotlib</li>
+                    </ul>
+
+                    <div class="project-row__links">
+                        <a
+                            class="github-link"
+                            href="https://github.com/shilicao/Films-Visualization"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Film visualization source code on GitHub"
+                            title="View source on GitHub"
+                        >
+                            <span class="iconify"
+                                data-icon="simple-icons:github"
+                                aria-hidden="true"></span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class = journey>
-                <img src = "images/projects/pacman.png">
-                <div class = summary>
-                    <h6>Pac-Man</h6>
-                    <p>A classic japanese game written in html canvas and javascript. This project was by far the 
-                       most challenging personal project I have done so far.
+            </article>
+
+            <article class="project-row" data-reveal>
+                <div class="project-row__image">
+                    <img
+                        src="images/projects/pacman.png"
+                        alt="Pac-Man game made with HTML Canvas and JavaScript"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="project-row__content">
+                    <p class="project-row__number">03 · Browser game</p>
+                    <h3>Pac-Man</h3>
+                    <p class="project-row__description">
+                        A classic arcade game recreated in the browser. This was
+                        one of my most challenging personal projects.
                     </p>
-                    <a href="https://github.com/shilicao/Games" class = "btn-outline" target = "blank"><i class="fab fa-github"></i> Code</a>
+
+                    <ul class="project-row__technologies" aria-label="Technologies used">
+                        <li>JavaScript</li>
+                        <li>HTML Canvas</li>
+                    </ul>
+
+                    <div class="project-row__links">
+                        <a
+                            class="github-link"
+                            href="https://github.com/shilicao/Games"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Pac-Man source code on GitHub"
+                            title="View source on GitHub"
+                        >
+                            <span class="iconify"
+                                data-icon="simple-icons:github"
+                                aria-hidden="true"></span>
+                        </a>
+                    </div>
                 </div>
-            </div>
+            </article>
         </div>
     </div>
-
 </section>
 
 <!-- Contact info section -->
